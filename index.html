@@ -5,35 +5,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KITECH International Workshop on Humanoid Robots and Applications</title>
     <style>
-        /* --- 일반 웹페이지 스타일 --- */
+        /* 
+         * ==================================
+         * 전체 페이지 스타일 (직접 수정 가능)
+         * ==================================
+         */
+
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
             line-height: 1.6;
             color: #333;
-            background-color: #fff;
+            background-color: #f8f9fa; /* 배경색을 약간 부드럽게 변경 */
             margin: 0;
             padding: 0;
         }
-        /* 전체 콘텐츠를 감싸고 중앙 정렬 */
+        
+        /* 전체 콘텐츠를 감싸는 영역. 웹페이지의 너비와 중앙 정렬을 담당합니다. */
         .container {
-            max-width: 960px; /* 콘텐츠의 최대 너비 설정 */
-            margin: 0 auto;   /* 좌우 여백을 자동으로 계산하여 중앙 정렬 */
-            padding: 20px;    /* 좌우에 여백을 줌 */
+            max-width: 960px; /* 웹페이지 내용의 최대 너비. 이 값을 줄이면 내용 영역이 좁아집니다. */
+            margin: 0 auto;   /* 페이지를 항상 화면 중앙에 위치시킴 */
+            padding: 40px;    /* 콘텐츠 영역과 화면 가장자리 사이의 여백 */
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.05); /* 약간의 그림자 효과 추가 */
+            border-radius: 8px; /* 모서리를 부드럽게 */
+            margin-top: 30px;
+            margin-bottom: 30px;
         }
 
-        /* 헤더 스타일 */
+        /* --- 헤더 (상단 로고 및 컨퍼런스 정보) --- */
         .header {
             text-align: center;
             border-bottom: 2px solid #eee;
             padding-bottom: 20px;
             margin-bottom: 40px;
         }
+        
+        /* ★★★ 상단 로고 크기 수정 ★★★ */
         .header img.logo {
-            width: 100px; /* 로고 크기 조정 */
+            width: 160px; /* 이 값을 변경하여 상단 로고 크기를 조절하세요. (예: 180px) */
             margin-bottom: 15px;
         }
-        .header h1 {
-            font-size: 28px; /* 제목 폰트 크기 키움 */
+
+        .header .conference-title {
+            font-size: 24px;
+            font-weight: 600;
             color: #2c3e50;
             margin: 0;
         }
@@ -42,32 +57,35 @@
             color: #555;
             margin: 5px 0;
         }
-        .header .sub-note {
-            font-style: italic;
-            color: #777;
-            font-size: 14px;
-            margin-top: 15px;
-        }
 
-        /* 섹션 제목 스타일 */
+        /* --- 섹션 제목 (Objective, Speakers 등) --- */
         h2 {
-            font-size: 24px;
+            font-size: 26px;
             font-weight: 600;
             color: #2c3e50;
-            border-bottom: 2px solid #3498db; /* 강조색 변경 */
+            border-bottom: 3px solid #3498db; /* 제목 밑줄 색상 및 두께 */
             padding-bottom: 10px;
-            margin-top: 40px;
+            margin-top: 50px; /* 섹션 간의 간격 */
             margin-bottom: 20px;
         }
+        
+        /* 워크샵 메인 타이틀 */
+        .workshop-title {
+            font-size: 36px;
+            font-weight: bold;
+            color: #333;
+            text-align: center;
+            margin-bottom: 40px;
+        }
 
-        /* 본문 텍스트 스타일 */
+        /* --- 본문 텍스트 --- */
         p, li {
             font-size: 16px;
-            color: #555;
+            color: #444;
         }
         ul {
             padding-left: 20px;
-            margin-top: 10px;
+            list-style-type: disc;
         }
         strong {
             font-weight: 600;
@@ -81,28 +99,32 @@
             text-decoration: underline;
         }
 
-        /* 테이블 스타일 */
+        /* --- 테이블 스타일 --- */
         .table-wrapper {
             overflow-x: auto; /* 화면이 좁을 때 테이블을 좌우로 스크롤 가능하게 함 */
+            border: 1px solid #ddd;
+            border-radius: 4px;
         }
         table {
             width: 100%;
             border-collapse: collapse;
-            margin-top: 20px;
             font-size: 15px;
         }
         th, td {
-            border: 1px solid #ddd;
-            padding: 12px;
+            border-bottom: 1px solid #ddd;
+            padding: 14px;
             text-align: left;
-            vertical-align: top;
+            vertical-align: middle;
+        }
+        tr:last-child td {
+            border-bottom: none; /* 마지막 줄의 밑줄 제거 */
         }
         th {
-            background-color: #f7f7f7;
+            background-color: #f7f9fc;
             font-weight: 600;
         }
         
-        /* 푸터 스타일 */
+        /* --- 푸터 (하단 로고) --- */
         .footer {
             display: flex;
             justify-content: space-between;
@@ -111,9 +133,11 @@
             padding-top: 30px;
             margin-top: 60px;
         }
+        
+        /* ★★★ 하단 로고 크기 수정 ★★★ */
         .footer img {
-            height: 35px;
-            opacity: 0.7;
+            height: 50px; /* 이 값을 변경하여 하단 로고 크기를 조절하세요. (예: 60px) */
+            opacity: 0.8;
         }
     </style>
 </head>
@@ -121,18 +145,17 @@
     <div class="container">
         <header class="header">
             <img src="images/humanoids_logo.png" alt="Humanoids 2025 Logo" class="logo">
-            <h1>2025 IEEE-RAS 24th International Conference on Humanoid Robots</h1>
+            <h1 class="conference-title">2025 IEEE-RAS 24th International Conference on Humanoid Robots</h1>
             <p>September 30 – October 2, 2025 • COEX, Seoul, Korea • <a href="http://2025humanoids.org" target="_blank">2025humanoids.org</a></p>
-            <p class="sub-note">[Please submit the complete template in PDF (up to 2 pages) via PaperPlaza for Humanoids 2025.]</p>
         </header>
 
         <main>
-            <h1>KITECH International Workshop on Humanoid Robots and Applications</h1>
+            <h1 class="workshop-title">KITECH International Workshop on Humanoid Robots and Applications</h1>
 
             <h2>Type and Duration</h2>
             <p><strong>Type:</strong> Workshop<br><strong>Duration:</strong> Half day</p>
 
-            <h2>List of Organizers</h2>
+            <h2>Organizers</h2>
             <p>
                 <strong>Gi-Hun Yang</strong>, KITECH (Korea Institute of Industrial Technology) - <i>Primary Contact</i><br>
                 Email: <a href="mailto:yanggh@kitech.re.kr">yanggh@kitech.re.kr</a>
@@ -151,11 +174,11 @@
                 <li>Application to Manufacturing industry with Humanoid Robot, Advanced Robotics</li>
             </ul>
 
-            <h2>Expected attendance</h2>
+            <h2>Expected Attendance</h2>
             <p>Almost 50 people would attend the workshop.</p>
 
             <h2>Invited Speakers</h2>
-            <p><i>Invited Speakers might be changed according to circumstances</i></p>
+            <p><i>Invited Speakers might be changed according to circumstances.</i></p>
             <div class="table-wrapper">
                 <table>
                     <thead>
@@ -180,8 +203,8 @@
                 <table>
                     <thead>
                         <tr>
-                            <th style="width: 25%;">Time</th>
-                            <th style="width: 75%;">Talk</th>
+                            <th style="width: 30%;">Time</th>
+                            <th>Activity</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -193,9 +216,6 @@
                     </tbody>
                 </table>
             </div>
-            
-            <h2>Additional Request</h2>
-            <p>Describe any additional requests you may have for the organization of your workshops/tutorials.</p>
         </main>
 
         <footer class="footer">
@@ -204,4 +224,4 @@
         </footer>
     </div>
 </body>
-</html>```
+</html>
