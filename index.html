@@ -5,113 +5,115 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KITECH International Workshop on Humanoid Robots and Applications</title>
     <style>
-        /* 기본 페이지 스타일 */
+        /* --- 일반 웹페이지 스타일 --- */
         body {
-            font-family: Arial, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
             color: #333;
-            background-color: #f4f4f4;
-            display: flex;
-            justify-content: center;
-            padding: 20px 0;
-        }
-        /* A4 용지 비율의 컨테이너 */
-        .container {
-            width: 800px;
             background-color: #fff;
-            padding: 50px 60px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-            position: relative;
-            min-height: 1120px; /* A4 비율에 맞춘 최소 높이 */
-            display: flex;
-            flex-direction: column;
+            margin: 0;
+            padding: 0;
         }
-        main {
-            flex-grow: 1;
+        /* 전체 콘텐츠를 감싸고 중앙 정렬 */
+        .container {
+            max-width: 960px; /* 콘텐츠의 최대 너비 설정 */
+            margin: 0 auto;   /* 좌우 여백을 자동으로 계산하여 중앙 정렬 */
+            padding: 20px;    /* 좌우에 여백을 줌 */
         }
+
         /* 헤더 스타일 */
         .header {
             text-align: center;
-            border-bottom: 1px solid #e0e0e0;
+            border-bottom: 2px solid #eee;
             padding-bottom: 20px;
-            margin-bottom: 30px;
+            margin-bottom: 40px;
         }
         .header img.logo {
-            width: 120px;
+            width: 100px; /* 로고 크기 조정 */
             margin-bottom: 15px;
         }
         .header h1 {
-            font-size: 18px;
-            font-weight: bold;
-            color: #000;
+            font-size: 28px; /* 제목 폰트 크기 키움 */
+            color: #2c3e50;
             margin: 0;
         }
         .header p {
-            font-size: 14px;
+            font-size: 16px;
+            color: #555;
             margin: 5px 0;
         }
         .header .sub-note {
             font-style: italic;
-            color: #555;
-            margin-top: 20px;
+            color: #777;
+            font-size: 14px;
+            margin-top: 15px;
         }
 
         /* 섹션 제목 스타일 */
         h2 {
-            font-size: 16px;
-            font-weight: bold;
-            color: #000;
-            border-bottom: 2px solid #000;
-            padding-bottom: 5px;
-            margin-top: 30px;
-            margin-bottom: 15px;
+            font-size: 24px;
+            font-weight: 600;
+            color: #2c3e50;
+            border-bottom: 2px solid #3498db; /* 강조색 변경 */
+            padding-bottom: 10px;
+            margin-top: 40px;
+            margin-bottom: 20px;
         }
 
         /* 본문 텍스트 스타일 */
         p, li {
-            font-size: 14px;
-            line-height: 1.6;
+            font-size: 16px;
+            color: #555;
         }
         ul {
             padding-left: 20px;
             margin-top: 10px;
         }
         strong {
-            font-weight: bold;
+            font-weight: 600;
+            color: #000;
+        }
+        a {
+            color: #3498db;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
         }
 
         /* 테이블 스타일 */
+        .table-wrapper {
+            overflow-x: auto; /* 화면이 좁을 때 테이블을 좌우로 스크롤 가능하게 함 */
+        }
         table {
             width: 100%;
             border-collapse: collapse;
-            margin-top: 15px;
-            font-size: 14px;
+            margin-top: 20px;
+            font-size: 15px;
         }
         th, td {
-            border: 1px solid #ccc;
-            padding: 10px;
+            border: 1px solid #ddd;
+            padding: 12px;
             text-align: left;
             vertical-align: top;
         }
         th {
-            background-color: #f2f2f2;
-            font-weight: bold;
+            background-color: #f7f7f7;
+            font-weight: 600;
         }
         
-        /* 프로그램 테이블 특별 스타일 */
-        .program-table th:nth-child(1) { width: 25%; }
-        .program-table th:nth-child(2) { width: 55%; }
-        .program-table th:nth-child(3) { width: 20%; }
-
         /* 푸터 스타일 */
         .footer {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding-top: 40px;
-            margin-top: auto; /* 내용을 아래로 밀어냄 */
+            border-top: 2px solid #eee;
+            padding-top: 30px;
+            margin-top: 60px;
         }
         .footer img {
-            height: 40px;
+            height: 35px;
+            opacity: 0.7;
         }
     </style>
 </head>
@@ -120,77 +122,77 @@
         <header class="header">
             <img src="images/humanoids_logo.png" alt="Humanoids 2025 Logo" class="logo">
             <h1>2025 IEEE-RAS 24th International Conference on Humanoid Robots</h1>
-            <p>September 30 – October 2, 2025 • COEX, Seoul, Korea • 2025humanoids.org</p>
+            <p>September 30 – October 2, 2025 • COEX, Seoul, Korea • <a href="http://2025humanoids.org" target="_blank">2025humanoids.org</a></p>
             <p class="sub-note">[Please submit the complete template in PDF (up to 2 pages) via PaperPlaza for Humanoids 2025.]</p>
         </header>
 
         <main>
-            <h2>Title of Workshop/Tutorial</h2>
-            <p style="font-size: 18px; font-weight: bold; color: #000;">KITECH INTERNATIONAL WORKSHOP ON HUMANOID ROBOTS AND APPLICATIONS</p>
+            <h1>KITECH International Workshop on Humanoid Robots and Applications</h1>
 
             <h2>Type and Duration</h2>
             <p><strong>Type:</strong> Workshop<br><strong>Duration:</strong> Half day</p>
 
             <h2>List of Organizers</h2>
-            <p>Provide complete name, affiliation, e-mail. Please identify the primary contact person.</p>
             <p>
-                Gi-Hun Yang, KITECH(Korea Institute of Industrial Technology), yanggh@kitech.re.kr<br>
-                Dongbum Pyo, KITECH(Korea Institute of Industrial Technology), pyodb@kitech.re.kr
+                <strong>Gi-Hun Yang</strong>, KITECH (Korea Institute of Industrial Technology) - <i>Primary Contact</i><br>
+                Email: <a href="mailto:yanggh@kitech.re.kr">yanggh@kitech.re.kr</a>
+            </p>
+            <p>
+                <strong>Dongbum Pyo</strong>, KITECH (Korea Institute of Industrial Technology)<br>
+                Email: <a href="mailto:pyodb@kitech.re.kr">pyodb@kitech.re.kr</a>
             </p>
 
             <h2>Objective and Scope</h2>
             <p>This workshop will provide time to share and discuss the overall latest trends and research results related to hardware, physical AI, manipulation, and walking control related to humanoids, which have been actively studied and have been receiving increasing attention in the field of robotics research. It will also be a useful time to think about how advanced robots, including humanoid robots, can be utilized in the manufacturing industry.</p>
 
             <h2>List of Topics</h2>
-            <p>Provide a list of topics (keywords) addressed in your workshop/tutorial.</p>
             <ul>
                 <li>Humanoid Robot Hardware, Physical AI for Humanoid Robots, Control for Manipulation and Walking of Humanoid Robot</li>
                 <li>Application to Manufacturing industry with Humanoid Robot, Advanced Robotics</li>
             </ul>
 
             <h2>Expected attendance</h2>
-            <p>Provide an estimate on the expected attendance to your workshop/tutorial based on the attendance of similar past events, if any.</p>
             <p>Almost 50 people would attend the workshop.</p>
 
-            <!-- 두 번째 페이지 내용 -->
             <h2>Invited Speakers</h2>
-            <p>Provide a list of invited speakers (if applicable) in the format of “name, affiliation, email”.</p>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Name</th>
-                        <th>Affiliation</th>
-                        <th>Email</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr><td>Prof. Christian Ott</td><td>TUWIEN</td><td>christian.ott@tuwien.ac.kr</td></tr>
-                    <tr><td>Dr. Jinoh Lee</td><td>DLR</td><td>jinohlee@dlr.de</td></tr>
-                    <tr><td>Prof. Jeehwan Ryu</td><td>KAIST</td><td>jhryu@kaist.ac.kr</td></tr>
-                    <tr><td>Prof. Jaeheung Park</td><td>Seoul National University</td><td>park73@snu.ac.kr</td></tr>
-                    <tr><td>Prof. Baekyu Cho</td><td>Kookmin University</td><td>swan0421@gmail.com</td></tr>
-                </tbody>
-            </table>
             <p><i>Invited Speakers might be changed according to circumstances</i></p>
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Affiliation</th>
+                            <th>Email</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Prof. Christian Ott</td><td>TUWIEN</td><td><a href="mailto:christian.ott@tuwien.ac.kr">christian.ott@tuwien.ac.kr</a></td></tr>
+                        <tr><td>Dr. Jinoh Lee</td><td>DLR</td><td><a href="mailto:jinohlee@dlr.de">jinohlee@dlr.de</a></td></tr>
+                        <tr><td>Prof. Jeehwan Ryu</td><td>KAIST</td><td><a href="mailto:jhryu@kaist.ac.kr">jhryu@kaist.ac.kr</a></td></tr>
+                        <tr><td>Prof. Jaeheung Park</td><td>Seoul National University</td><td><a href="mailto:park73@snu.ac.kr">park73@snu.ac.kr</a></td></tr>
+                        <tr><td>Prof. Baekyu Cho</td><td>Kookmin University</td><td><a href="mailto:swan0421@gmail.com">swan0421@gmail.com</a></td></tr>
+                    </tbody>
+                </table>
+            </div>
 
             <h2>Program</h2>
-            <p>Provide a program for your workshop/tutorial.</p>
-            <table class="program-table">
-                <thead>
-                    <tr>
-                        <th>Time</th>
-                        <th>Talk</th>
-                        <th>Comments</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr><td>12:00 – 13:00</td><td>Lunch</td><td></td></tr>
-                    <tr><td>13:00 – 15:00</td><td>KITECH Humanoid Workshop(Invited Talk)</td><td></td></tr>
-                    <tr><td>15:00 – 15:30</td><td>Coffee break</td><td></td></tr>
-                    <tr><td>15:30 – 17:30</td><td>KITECH Humanoid Workshop(Invited Talk)</td><td></td></tr>
-                    <tr><td>17:30</td><td>End</td><td></td></tr>
-                </tbody>
-            </table>
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th style="width: 25%;">Time</th>
+                            <th style="width: 75%;">Talk</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>12:00 – 13:00</td><td>Lunch</td></tr>
+                        <tr><td>13:00 – 15:00</td><td>KITECH Humanoid Workshop (Invited Talk)</td></tr>
+                        <tr><td>15:00 – 15:30</td><td>Coffee break</td></tr>
+                        <tr><td>15:30 – 17:30</td><td>KITECH Humanoid Workshop (Invited Talk)</td></tr>
+                        <tr><td>17:30</td><td>End</td></tr>
+                    </tbody>
+                </table>
+            </div>
             
             <h2>Additional Request</h2>
             <p>Describe any additional requests you may have for the organization of your workshops/tutorials.</p>
